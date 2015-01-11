@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{EC4C607B-12E1-48F9-A55C-2A722D153FE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{46C2D29A-D19A-4450-B2FD-1B455D268213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBLL", "IBLL\IBLL.csproj", "{EA0F6C3A-D139-49FC-96D6-DC13FC3249B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{97807BCC-D585-499C-8FAC-0555939D3224}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{60B57BEC-EE60-4FE6-A6D3-1328F795E25F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs27
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Common\\Common.csproj
+		SccProjectName1 = Common
+		SccLocalPath1 = Common
+		SccProjectUniqueName2 = DAL\\DAL.csproj
+		SccProjectName2 = DAL
+		SccLocalPath2 = DAL
+		SccProjectUniqueName3 = IBLL\\IBLL.csproj
+		SccProjectName3 = IBLL
+		SccLocalPath3 = IBLL
+		SccProjectUniqueName4 = BLL\\BLL.csproj
+		SccProjectName4 = BLL
+		SccLocalPath4 = BLL
+		SccProjectUniqueName5 = App\\App.csproj
+		SccProjectName5 = App
+		SccLocalPath5 = App
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC4C607B-12E1-48F9-A55C-2A722D153FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4C607B-12E1-48F9-A55C-2A722D153FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4C607B-12E1-48F9-A55C-2A722D153FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4C607B-12E1-48F9-A55C-2A722D153FE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46C2D29A-D19A-4450-B2FD-1B455D268213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46C2D29A-D19A-4450-B2FD-1B455D268213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46C2D29A-D19A-4450-B2FD-1B455D268213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46C2D29A-D19A-4450-B2FD-1B455D268213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA0F6C3A-D139-49FC-96D6-DC13FC3249B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA0F6C3A-D139-49FC-96D6-DC13FC3249B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA0F6C3A-D139-49FC-96D6-DC13FC3249B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA0F6C3A-D139-49FC-96D6-DC13FC3249B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97807BCC-D585-499C-8FAC-0555939D3224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97807BCC-D585-499C-8FAC-0555939D3224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97807BCC-D585-499C-8FAC-0555939D3224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97807BCC-D585-499C-8FAC-0555939D3224}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60B57BEC-EE60-4FE6-A6D3-1328F795E25F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60B57BEC-EE60-4FE6-A6D3-1328F795E25F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60B57BEC-EE60-4FE6-A6D3-1328F795E25F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60B57BEC-EE60-4FE6-A6D3-1328F795E25F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

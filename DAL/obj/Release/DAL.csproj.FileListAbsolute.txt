@@ -1,0 +1,16 @@
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Release\DAL.dll.config
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Release\DAL.dll
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Release\DAL.pdb
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Release\Common.dll
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Release\Common.pdb
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\obj\Release\DAL.dll
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\obj\Release\DAL.pdb
+F:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Release\DAL.dll.config
+F:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Release\DAL.dll
+F:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Release\DAL.pdb
+F:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Release\Common.dll
+F:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Release\Common.pdb
+F:\个人资料\项目\鲸语\Application\xpermission\DAL\obj\Release\DAL.dll
+F:\个人资料\项目\鲸语\Application\xpermission\DAL\obj\Release\DAL.pdb
+F:\个人资料\项目\鲸语\Application\xpermission\DAL\obj\Release\ResolveAssemblyReference.cache

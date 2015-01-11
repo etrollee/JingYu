@@ -1,0 +1,10 @@
+E:\个人资料\项目\鲸语\Application\xpermission\Common\bin\Debug\Common.dll
+E:\个人资料\项目\鲸语\Application\xpermission\Common\bin\Debug\Common.pdb
+E:\个人资料\项目\鲸语\Application\xpermission\Common\obj\Debug\Common.dll
+E:\个人资料\项目\鲸语\Application\xpermission\Common\obj\Debug\Common.pdb
+E:\个人资料\项目\鲸语\Application\xpermission\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\Books\个人资料\Application\xpermission\Common\bin\Debug\Common.dll
+E:\Books\个人资料\Application\xpermission\Common\bin\Debug\Common.pdb
+E:\Books\个人资料\Application\xpermission\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\Books\个人资料\Application\xpermission\Common\obj\Debug\Common.dll
+E:\Books\个人资料\Application\xpermission\Common\obj\Debug\Common.pdb

@@ -1,0 +1,898 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SysModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="SysModelStoreContainer">
+    <EntitySet Name="Appointment" EntityType="SysModel.Store.Appointment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FeedbackTemplate" EntityType="SysModel.Store.FeedbackTemplate" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FileUploader" EntityType="SysModel.Store.FileUploader" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InformationFeedback" EntityType="SysModel.Store.InformationFeedback" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InformationFeedbackTemplate" EntityType="SysModel.Store.InformationFeedbackTemplate" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InformationMember" EntityType="SysModel.Store.InformationMember" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InformationMerchant" EntityType="SysModel.Store.InformationMerchant" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Informations" EntityType="SysModel.Store.Informations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Member" EntityType="SysModel.Store.Member" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Member_MemberGroup" EntityType="SysModel.Store.Member_MemberGroup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MemberGroup" EntityType="SysModel.Store.MemberGroup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MemberInformations" EntityType="SysModel.Store.MemberInformations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Merchant" EntityType="SysModel.Store.Merchant" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MerchantInformations" EntityType="SysModel.Store.MerchantInformations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MerchantRegisterCode" EntityType="SysModel.Store.MerchantRegisterCode" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MerchantSysPerson" EntityType="SysModel.Store.MerchantSysPerson" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MerchantType" EntityType="SysModel.Store.MerchantType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegisterCode" EntityType="SysModel.Store.RegisterCode" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegisterCodeLogin" EntityType="SysModel.Store.RegisterCodeLogin" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegularCode" EntityType="SysModel.Store.RegularCode" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceProduct" EntityType="SysModel.Store.ServiceProduct" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SysException" EntityType="SysModel.Store.SysException" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SysField" EntityType="SysModel.Store.SysField" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SysLog" EntityType="SysModel.Store.SysLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SysMenu" EntityType="SysModel.Store.SysMenu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SysMenuSysOperation" EntityType="SysModel.Store.SysMenuSysOperation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SysMenuSysRoleSysOperation" EntityType="SysModel.Store.SysMenuSysRoleSysOperation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SysOperation" EntityType="SysModel.Store.SysOperation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SysParas" EntityType="SysModel.Store.SysParas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SysPerson" EntityType="SysModel.Store.SysPerson" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SysRole" EntityType="SysModel.Store.SysRole" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SysRoleSysPerson" EntityType="SysModel.Store.SysRoleSysPerson" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Appointment_ServiceProduct" Association="SysModel.Store.FK_Appointment_ServiceProduct">
+      <End Role="ServiceProduct" EntitySet="ServiceProduct" />
+      <End Role="Appointment" EntitySet="Appointment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InformationFeedback_FeedbackTemplate" Association="SysModel.Store.FK_InformationFeedback_FeedbackTemplate">
+      <End Role="FeedbackTemplate" EntitySet="FeedbackTemplate" />
+      <End Role="InformationFeedback" EntitySet="InformationFeedback" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InformationFeedback_Informations" Association="SysModel.Store.FK_InformationFeedback_Informations">
+      <End Role="Informations" EntitySet="Informations" />
+      <End Role="InformationFeedback" EntitySet="InformationFeedback" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InformationFeedbackTemplate_FeedbackTemplate" Association="SysModel.Store.FK_InformationFeedbackTemplate_FeedbackTemplate">
+      <End Role="FeedbackTemplate" EntitySet="FeedbackTemplate" />
+      <End Role="InformationFeedbackTemplate" EntitySet="InformationFeedbackTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InformationFeedbackTemplate_Informations" Association="SysModel.Store.FK_InformationFeedbackTemplate_Informations">
+      <End Role="Informations" EntitySet="Informations" />
+      <End Role="InformationFeedbackTemplate" EntitySet="InformationFeedbackTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InformationMember_Informations" Association="SysModel.Store.FK_InformationMember_Informations">
+      <End Role="Informations" EntitySet="Informations" />
+      <End Role="InformationMember" EntitySet="InformationMember" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InformationMember_Member" Association="SysModel.Store.FK_InformationMember_Member">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="InformationMember" EntitySet="InformationMember" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InformationMerchant_Informations" Association="SysModel.Store.FK_InformationMerchant_Informations">
+      <End Role="Informations" EntitySet="Informations" />
+      <End Role="InformationMerchant" EntitySet="InformationMerchant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InformationMerchant_Merchant" Association="SysModel.Store.FK_InformationMerchant_Merchant">
+      <End Role="Merchant" EntitySet="Merchant" />
+      <End Role="InformationMerchant" EntitySet="InformationMerchant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Informations_SysPerson" Association="SysModel.Store.FK_Informations_SysPerson">
+      <End Role="SysPerson" EntitySet="SysPerson" />
+      <End Role="Informations" EntitySet="Informations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Member_MemberGroup_Member" Association="SysModel.Store.FK_Member_MemberGroup_Member">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="Member_MemberGroup" EntitySet="Member_MemberGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Member_MemberGroup_MemberGroup" Association="SysModel.Store.FK_Member_MemberGroup_MemberGroup">
+      <End Role="MemberGroup" EntitySet="MemberGroup" />
+      <End Role="Member_MemberGroup" EntitySet="Member_MemberGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberGroup_MemberGroup" Association="SysModel.Store.FK_MemberGroup_MemberGroup">
+      <End Role="MemberGroup" EntitySet="MemberGroup" />
+      <End Role="MemberGroup1" EntitySet="MemberGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Merchant_MerchantType" Association="SysModel.Store.FK_Merchant_MerchantType">
+      <End Role="MerchantType" EntitySet="MerchantType" />
+      <End Role="Merchant" EntitySet="Merchant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MerchantSysPerson_Merchant" Association="SysModel.Store.FK_MerchantSysPerson_Merchant">
+      <End Role="Merchant" EntitySet="Merchant" />
+      <End Role="MerchantSysPerson" EntitySet="MerchantSysPerson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MerchantSysPerson_SysPerson" Association="SysModel.Store.FK_MerchantSysPerson_SysPerson">
+      <End Role="SysPerson" EntitySet="SysPerson" />
+      <End Role="MerchantSysPerson" EntitySet="MerchantSysPerson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegisterCode_Member" Association="SysModel.Store.FK_RegisterCode_Member">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="RegisterCode" EntitySet="RegisterCode" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegisterCode_Merchant" Association="SysModel.Store.FK_RegisterCode_Merchant">
+      <End Role="Merchant" EntitySet="Merchant" />
+      <End Role="RegisterCode" EntitySet="RegisterCode" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceProduct_Merchant" Association="SysModel.Store.FK_ServiceProduct_Merchant">
+      <End Role="Merchant" EntitySet="Merchant" />
+      <End Role="ServiceProduct" EntitySet="ServiceProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SYSFIELD_REFERENCE_SYSFIELD" Association="SysModel.Store.FK_SYSFIELD_REFERENCE_SYSFIELD">
+      <End Role="SysField" EntitySet="SysField" />
+      <End Role="SysField1" EntitySet="SysField" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SYSMENU_REFERENCE_SYSMENU" Association="SysModel.Store.FK_SYSMENU_REFERENCE_SYSMENU">
+      <End Role="SysMenu" EntitySet="SysMenu" />
+      <End Role="SysMenu1" EntitySet="SysMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SYSMENUS_REFERENCE_SYSMENU" Association="SysModel.Store.FK_SYSMENUS_REFERENCE_SYSMENU">
+      <End Role="SysMenu" EntitySet="SysMenu" />
+      <End Role="SysMenuSysOperation" EntitySet="SysMenuSysOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SYSMENUS_REFERENCE_SYSMENU2" Association="SysModel.Store.FK_SYSMENUS_REFERENCE_SYSMENU2">
+      <End Role="SysMenu" EntitySet="SysMenu" />
+      <End Role="SysMenuSysRoleSysOperation" EntitySet="SysMenuSysRoleSysOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SYSMENUS_REFERENCE_SYSOPERA" Association="SysModel.Store.FK_SYSMENUS_REFERENCE_SYSOPERA">
+      <End Role="SysOperation" EntitySet="SysOperation" />
+      <End Role="SysMenuSysOperation" EntitySet="SysMenuSysOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SYSMENUS_REFERENCE_SYSOPERA2" Association="SysModel.Store.FK_SYSMENUS_REFERENCE_SYSOPERA2">
+      <End Role="SysOperation" EntitySet="SysOperation" />
+      <End Role="SysMenuSysRoleSysOperation" EntitySet="SysMenuSysRoleSysOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SYSMENUS_REFERENCE_SYSROLE" Association="SysModel.Store.FK_SYSMENUS_REFERENCE_SYSROLE">
+      <End Role="SysRole" EntitySet="SysRole" />
+      <End Role="SysMenuSysRoleSysOperation" EntitySet="SysMenuSysRoleSysOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SYSROLES_REFERENCE_SYSPERSO" Association="SysModel.Store.FK_SYSROLES_REFERENCE_SYSPERSO">
+      <End Role="SysPerson" EntitySet="SysPerson" />
+      <End Role="SysRoleSysPerson" EntitySet="SysRoleSysPerson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SYSROLES_REFERENCE_SYSROLE" Association="SysModel.Store.FK_SYSROLES_REFERENCE_SYSROLE">
+      <End Role="SysRole" EntitySet="SysRole" />
+      <End Role="SysRoleSysPerson" EntitySet="SysRoleSysPerson" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MemberId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="MemberName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ServiceProductId" Type="int" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FeedbackTemplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsSys" Type="bit" Nullable="false" />
+    <Property Name="CreatePersonId" Type="nvarchar" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="FileUploader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Path" Type="nvarchar" MaxLength="200" />
+    <Property Name="FullPath" Type="varchar" MaxLength="500" />
+    <Property Name="Suffix" Type="nvarchar" MaxLength="200" />
+    <Property Name="Size" Type="int" />
+    <Property Name="Remark" Type="nvarchar" />
+    <Property Name="State" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="InformationFeedback">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="InformationsId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="FeedbackTemplateId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="MemberId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="MemberName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Question" Type="nvarchar" MaxLength="200" />
+    <Property Name="Type" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InformationFeedbackTemplate">
+    <Key>
+      <PropertyRef Name="InformationId" />
+      <PropertyRef Name="FeedbackTemplateId" />
+    </Key>
+    <Property Name="InformationId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="FeedbackTemplateId" Type="nvarchar" Nullable="false" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="InformationMember">
+    <Key>
+      <PropertyRef Name="InformationId" />
+      <PropertyRef Name="MemberId" />
+    </Key>
+    <Property Name="InformationId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="MemberId" Type="nvarchar" Nullable="false" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="InformationMerchant">
+    <Key>
+      <PropertyRef Name="InformationId" />
+      <PropertyRef Name="MerchantId" />
+    </Key>
+    <Property Name="InformationId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="MerchantId" Type="nvarchar" Nullable="false" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="Informations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Content" Type="text" Nullable="false" />
+    <Property Name="TimeLimit" Type="float" Nullable="false" />
+    <Property Name="CreatePersonId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="IsSend" Type="bit" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Code" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreatePersonId" Type="nvarchar" MaxLength="36" />
+    <Property Name="RegisterCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="Area" Type="nvarchar" MaxLength="50" />
+    <Property Name="Regtime" Type="datetime" />
+    <Property Name="RegisteredCapital" Type="decimal" />
+    <Property Name="Contacts" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegisteredAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="LegalRepresentative" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegisteredCellPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="SelfDefineOne" Type="nvarchar" MaxLength="200" />
+    <Property Name="SelfDefineTwo" Type="nvarchar" MaxLength="200" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="VIP" Type="bit" Nullable="false" />
+    <Property Name="IsValid" Type="bit" Nullable="false" />
+    <Property Name="IsVisible" Type="bit" Nullable="false" />
+    <Property Name="LogOnTimes" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Member_MemberGroup">
+    <Key>
+      <PropertyRef Name="MemberId" />
+      <PropertyRef Name="MemberGroupId" />
+    </Key>
+    <Property Name="MemberId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="MemberGroupId" Type="nvarchar" Nullable="false" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="MemberGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CreatePersonId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="MemberInformations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="InformationsId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="MemberId" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsRead" Type="bit" Nullable="false" />
+    <Property Name="IsFeedback" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Merchant">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Logo" Type="varbinary(max)" />
+    <Property Name="Description" Type="text" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contacts" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cellphone" Type="nvarchar" MaxLength="50" />
+    <Property Name="QQ" Type="bigint" />
+    <Property Name="SiteUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="ComprehensiveStar" Type="int" Nullable="false" />
+    <Property Name="MerchantTypeId" Type="int" Nullable="false" />
+    <Property Name="RegisterCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsVisible" Type="int" Nullable="false" />
+    <Property Name="ParentId" Type="nvarchar" MaxLength="36" />
+    <Property Name="Balance" Type="decimal" Scale="2" />
+    <Property Name="UpdateFlag" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MerchantInformations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="InformationsId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="MerchantId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="IsRead" Type="bit" Nullable="false" />
+    <Property Name="IsFeedback" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MerchantRegisterCode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegisterCodeId" Type="int" Nullable="false" />
+    <Property Name="MerchantId" Type="nvarchar" Nullable="false" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="MerchantSysPerson">
+    <Key>
+      <PropertyRef Name="SysPersonId" />
+      <PropertyRef Name="MerchantId" />
+    </Key>
+    <Property Name="SysPersonId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="MerchantId" Type="nvarchar" Nullable="false" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="MerchantType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Description" Type="text" />
+  </EntityType>
+  <EntityType Name="RegisterCode">
+    <Key>
+      <PropertyRef Name="Value" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="IsUsed" Type="bit" Nullable="false" />
+    <Property Name="IsDistribution" Type="bit" Nullable="false" />
+    <Property Name="IsValid" Type="bit" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="BelongMerchantId" Type="nvarchar" MaxLength="36" />
+    <Property Name="MerchantId" Type="nvarchar" MaxLength="36" />
+    <Property Name="MemberId" Type="nvarchar" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="RegisterCodeLogin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RCode" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="LoginTime" Type="datetime" />
+    <Property Name="SerialPort" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="RegularCode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="IsUsed" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServiceProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MerchantId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Description" Type="text" />
+    <Property Name="Star" Type="int" Nullable="false" />
+    <Property Name="Worth" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="SysException">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="LeiXing" Type="nvarchar" MaxLength="200" />
+    <Property Name="Message" Type="nvarchar" />
+    <Property Name="Result" Type="nvarchar" MaxLength="200" />
+    <Property Name="Remark" Type="nvarchar" />
+    <Property Name="State" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SysField">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="MyTexts" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="ParentId" Type="nvarchar" MaxLength="36" />
+    <Property Name="MyTables" Type="nvarchar" MaxLength="200" />
+    <Property Name="MyColums" Type="nvarchar" MaxLength="200" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="Remark" Type="nvarchar" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="UpdatePerson" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SysLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="PersonId" Type="nvarchar" MaxLength="36" />
+    <Property Name="Message" Type="nvarchar" />
+    <Property Name="Result" Type="nvarchar" MaxLength="200" />
+    <Property Name="MenuId" Type="nvarchar" MaxLength="36" />
+    <Property Name="Ip" Type="nvarchar" MaxLength="200" />
+    <Property Name="Remark" Type="nvarchar" />
+    <Property Name="State" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SysMenu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="ParentId" Type="nvarchar" MaxLength="36" />
+    <Property Name="Url" Type="nvarchar" MaxLength="200" />
+    <Property Name="Iconic" Type="nvarchar" MaxLength="200" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="Remark" Type="nvarchar" />
+    <Property Name="State" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="UpdatePerson" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsLeaf" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SysMenuSysOperation">
+    <Key>
+      <PropertyRef Name="SysMenuId" />
+      <PropertyRef Name="SysOperationId" />
+    </Key>
+    <Property Name="SysMenuId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="SysOperationId" Type="nvarchar" Nullable="false" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="SysMenuSysRoleSysOperation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="SysMenuId" Type="nvarchar" MaxLength="36" />
+    <Property Name="SysOperationId" Type="nvarchar" MaxLength="36" />
+    <Property Name="SysRoleId" Type="nvarchar" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="SysOperation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Function" Type="nvarchar" MaxLength="200" />
+    <Property Name="Iconic" Type="nvarchar" MaxLength="200" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="Remark" Type="nvarchar" />
+    <Property Name="State" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SysParas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="WelcomeInfo" Type="nvarchar" Nullable="false" />
+    <Property Name="DeductMoney" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="SysPerson">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="SysId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="MyName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="SurePassword" Type="nvarchar" MaxLength="200" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="200" />
+    <Property Name="Position" Type="nvarchar" MaxLength="200" />
+    <Property Name="MobilePhoneNumber" Type="nvarchar" MaxLength="200" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="200" />
+    <Property Name="Province" Type="nvarchar" MaxLength="200" />
+    <Property Name="City" Type="nvarchar" MaxLength="200" />
+    <Property Name="Village" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="Remark" Type="decimal" />
+    <Property Name="State" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="UpdatePerson" Type="nvarchar" MaxLength="200" />
+    <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="SysRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Description" Type="nvarchar" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="UpdatePerson" Type="nvarchar" MaxLength="200" />
+    <Property Name="Power" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysRoleSysPerson">
+    <Key>
+      <PropertyRef Name="SysPersonId" />
+      <PropertyRef Name="SysRoleId" />
+    </Key>
+    <Property Name="SysPersonId" Type="nvarchar" Nullable="false" MaxLength="36" />
+    <Property Name="SysRoleId" Type="nvarchar" Nullable="false" MaxLength="36" />
+  </EntityType>
+  <Association Name="FK_Appointment_ServiceProduct">
+    <End Role="ServiceProduct" Type="SysModel.Store.ServiceProduct" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Appointment" Type="SysModel.Store.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="ServiceProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InformationFeedback_FeedbackTemplate">
+    <End Role="FeedbackTemplate" Type="SysModel.Store.FeedbackTemplate" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InformationFeedback" Type="SysModel.Store.InformationFeedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FeedbackTemplate">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InformationFeedback">
+        <PropertyRef Name="FeedbackTemplateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InformationFeedback_Informations">
+    <End Role="Informations" Type="SysModel.Store.Informations" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InformationFeedback" Type="SysModel.Store.InformationFeedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Informations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InformationFeedback">
+        <PropertyRef Name="InformationsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InformationFeedbackTemplate_FeedbackTemplate">
+    <End Role="FeedbackTemplate" Type="SysModel.Store.FeedbackTemplate" Multiplicity="1" />
+    <End Role="InformationFeedbackTemplate" Type="SysModel.Store.InformationFeedbackTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FeedbackTemplate">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InformationFeedbackTemplate">
+        <PropertyRef Name="FeedbackTemplateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InformationFeedbackTemplate_Informations">
+    <End Role="Informations" Type="SysModel.Store.Informations" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InformationFeedbackTemplate" Type="SysModel.Store.InformationFeedbackTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Informations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InformationFeedbackTemplate">
+        <PropertyRef Name="InformationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InformationMember_Informations">
+    <End Role="Informations" Type="SysModel.Store.Informations" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InformationMember" Type="SysModel.Store.InformationMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Informations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InformationMember">
+        <PropertyRef Name="InformationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InformationMember_Member">
+    <End Role="Member" Type="SysModel.Store.Member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InformationMember" Type="SysModel.Store.InformationMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InformationMember">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InformationMerchant_Informations">
+    <End Role="Informations" Type="SysModel.Store.Informations" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InformationMerchant" Type="SysModel.Store.InformationMerchant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Informations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InformationMerchant">
+        <PropertyRef Name="InformationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InformationMerchant_Merchant">
+    <End Role="Merchant" Type="SysModel.Store.Merchant" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InformationMerchant" Type="SysModel.Store.InformationMerchant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Merchant">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InformationMerchant">
+        <PropertyRef Name="MerchantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Informations_SysPerson">
+    <End Role="SysPerson" Type="SysModel.Store.SysPerson" Multiplicity="1" />
+    <End Role="Informations" Type="SysModel.Store.Informations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysPerson">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Informations">
+        <PropertyRef Name="CreatePersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Member_MemberGroup_Member">
+    <End Role="Member" Type="SysModel.Store.Member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Member_MemberGroup" Type="SysModel.Store.Member_MemberGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Member_MemberGroup">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Member_MemberGroup_MemberGroup">
+    <End Role="MemberGroup" Type="SysModel.Store.MemberGroup" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Member_MemberGroup" Type="SysModel.Store.Member_MemberGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MemberGroup">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Member_MemberGroup">
+        <PropertyRef Name="MemberGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberGroup_MemberGroup">
+    <End Role="MemberGroup" Type="SysModel.Store.MemberGroup" Multiplicity="1" />
+    <End Role="MemberGroup1" Type="SysModel.Store.MemberGroup" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="MemberGroup">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MemberGroup1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Merchant_MerchantType">
+    <End Role="MerchantType" Type="SysModel.Store.MerchantType" Multiplicity="1" />
+    <End Role="Merchant" Type="SysModel.Store.Merchant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MerchantType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Merchant">
+        <PropertyRef Name="MerchantTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MerchantSysPerson_Merchant">
+    <End Role="Merchant" Type="SysModel.Store.Merchant" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MerchantSysPerson" Type="SysModel.Store.MerchantSysPerson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Merchant">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MerchantSysPerson">
+        <PropertyRef Name="MerchantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MerchantSysPerson_SysPerson">
+    <End Role="SysPerson" Type="SysModel.Store.SysPerson" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MerchantSysPerson" Type="SysModel.Store.MerchantSysPerson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysPerson">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MerchantSysPerson">
+        <PropertyRef Name="SysPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegisterCode_Member">
+    <End Role="Member" Type="SysModel.Store.Member" Multiplicity="0..1" />
+    <End Role="RegisterCode" Type="SysModel.Store.RegisterCode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RegisterCode">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegisterCode_Merchant">
+    <End Role="Merchant" Type="SysModel.Store.Merchant" Multiplicity="0..1" />
+    <End Role="RegisterCode" Type="SysModel.Store.RegisterCode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Merchant">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RegisterCode">
+        <PropertyRef Name="BelongMerchantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceProduct_Merchant">
+    <End Role="Merchant" Type="SysModel.Store.Merchant" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ServiceProduct" Type="SysModel.Store.ServiceProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Merchant">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceProduct">
+        <PropertyRef Name="MerchantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SYSFIELD_REFERENCE_SYSFIELD">
+    <End Role="SysField" Type="SysModel.Store.SysField" Multiplicity="0..1" />
+    <End Role="SysField1" Type="SysModel.Store.SysField" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysField">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysField1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SYSMENU_REFERENCE_SYSMENU">
+    <End Role="SysMenu" Type="SysModel.Store.SysMenu" Multiplicity="0..1" />
+    <End Role="SysMenu1" Type="SysModel.Store.SysMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysMenu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysMenu1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SYSMENUS_REFERENCE_SYSMENU">
+    <End Role="SysMenu" Type="SysModel.Store.SysMenu" Multiplicity="1" />
+    <End Role="SysMenuSysOperation" Type="SysModel.Store.SysMenuSysOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysMenu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysMenuSysOperation">
+        <PropertyRef Name="SysMenuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SYSMENUS_REFERENCE_SYSMENU2">
+    <End Role="SysMenu" Type="SysModel.Store.SysMenu" Multiplicity="0..1" />
+    <End Role="SysMenuSysRoleSysOperation" Type="SysModel.Store.SysMenuSysRoleSysOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysMenu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysMenuSysRoleSysOperation">
+        <PropertyRef Name="SysMenuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SYSMENUS_REFERENCE_SYSOPERA">
+    <End Role="SysOperation" Type="SysModel.Store.SysOperation" Multiplicity="1" />
+    <End Role="SysMenuSysOperation" Type="SysModel.Store.SysMenuSysOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysOperation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysMenuSysOperation">
+        <PropertyRef Name="SysOperationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SYSMENUS_REFERENCE_SYSOPERA2">
+    <End Role="SysOperation" Type="SysModel.Store.SysOperation" Multiplicity="0..1" />
+    <End Role="SysMenuSysRoleSysOperation" Type="SysModel.Store.SysMenuSysRoleSysOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysOperation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysMenuSysRoleSysOperation">
+        <PropertyRef Name="SysOperationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SYSMENUS_REFERENCE_SYSROLE">
+    <End Role="SysRole" Type="SysModel.Store.SysRole" Multiplicity="0..1" />
+    <End Role="SysMenuSysRoleSysOperation" Type="SysModel.Store.SysMenuSysRoleSysOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysMenuSysRoleSysOperation">
+        <PropertyRef Name="SysRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SYSROLES_REFERENCE_SYSPERSO">
+    <End Role="SysPerson" Type="SysModel.Store.SysPerson" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SysRoleSysPerson" Type="SysModel.Store.SysRoleSysPerson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysPerson">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRoleSysPerson">
+        <PropertyRef Name="SysPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SYSROLES_REFERENCE_SYSROLE">
+    <End Role="SysRole" Type="SysModel.Store.SysRole" Multiplicity="1" />
+    <End Role="SysRoleSysPerson" Type="SysModel.Store.SysRoleSysPerson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRoleSysPerson">
+        <PropertyRef Name="SysRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,9 @@
+﻿#fileMerchantLogoUploader, .fileUploader {
+    background: url(open-select-normal.png) no-repeat;
+    border-radius: 3px;
+    display: inline-block !important;
+}
+
+    #fileMerchantLogoUploader:hover, .fileUploader:hover {
+        background: url(open-select-hover.png) no-repeat;
+    }

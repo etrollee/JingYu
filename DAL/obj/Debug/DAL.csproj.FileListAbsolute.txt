@@ -1,0 +1,16 @@
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Debug\DAL.dll.config
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Debug\DAL.dll
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Debug\DAL.pdb
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Debug\Common.dll
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\bin\Debug\Common.pdb
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\obj\Debug\DAL.dll
+E:\个人资料\项目\鲸语\Application\xpermission\DAL\obj\Debug\DAL.pdb
+E:\Books\个人资料\Application\xpermission\DAL\bin\Debug\DAL.dll.config
+E:\Books\个人资料\Application\xpermission\DAL\bin\Debug\DAL.dll
+E:\Books\个人资料\Application\xpermission\DAL\bin\Debug\DAL.pdb
+E:\Books\个人资料\Application\xpermission\DAL\bin\Debug\Common.dll
+E:\Books\个人资料\Application\xpermission\DAL\bin\Debug\Common.pdb
+E:\Books\个人资料\Application\xpermission\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\Books\个人资料\Application\xpermission\DAL\obj\Debug\DAL.dll
+E:\Books\个人资料\Application\xpermission\DAL\obj\Debug\DAL.pdb

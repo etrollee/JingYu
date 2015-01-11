@@ -1,0 +1,10 @@
+E:\个人资料\项目\鲸语\Application\xpermission\Common\bin\Release\Common.dll
+E:\个人资料\项目\鲸语\Application\xpermission\Common\bin\Release\Common.pdb
+E:\个人资料\项目\鲸语\Application\xpermission\Common\obj\Release\Common.dll
+E:\个人资料\项目\鲸语\Application\xpermission\Common\obj\Release\Common.pdb
+E:\个人资料\项目\鲸语\Application\xpermission\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+F:\个人资料\项目\鲸语\Application\xpermission\Common\bin\Release\Common.dll
+F:\个人资料\项目\鲸语\Application\xpermission\Common\bin\Release\Common.pdb
+F:\个人资料\项目\鲸语\Application\xpermission\Common\obj\Release\Common.dll
+F:\个人资料\项目\鲸语\Application\xpermission\Common\obj\Release\Common.pdb
+F:\个人资料\项目\鲸语\Application\xpermission\Common\obj\Release\ResolveAssemblyReference.cache

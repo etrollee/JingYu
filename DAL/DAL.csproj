@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46C2D29A-D19A-4450-B2FD-1B455D268213}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.DurableInstancing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Appointment.cs" />
+    <Compile Include="AppointmentRepository.cs" />
+    <Compile Include="FeedbackTemplate.cs" />
+    <Compile Include="FeedbackTemplateRepository.cs" />
+    <Compile Include="FileUploader.cs" />
+    <Compile Include="FileUploaderRepository.cs" />
+    <Compile Include="Framework\BaseRepository.cs" />
+    <Compile Include="Framework\BaseViewRepository.cs" />
+    <Compile Include="Framework\IBaseEntity.cs" />
+    <Compile Include="InformationFeedback.cs" />
+    <Compile Include="InformationFeedbackReport.cs" />
+    <Compile Include="Informations.cs" />
+    <Compile Include="InformationsRepository.cs" />
+    <Compile Include="Member.cs" />
+    <Compile Include="MemberGroup.cs" />
+    <Compile Include="MemberGroupRepository.cs" />
+    <Compile Include="MemberMemberGroup.cs" />
+    <Compile Include="MemberRepository.cs" />
+    <Compile Include="Member_MemberGroup.cs" />
+    <Compile Include="Merchant.cs" />
+    <Compile Include="MerchantRegisterCode.cs" />
+    <Compile Include="MerchantRepository.cs" />
+    <Compile Include="MerchantType.cs" />
+    <Compile Include="MerchantTypeRepository.cs" />
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectQueryExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterCode.cs" />
+    <Compile Include="RegisterCodeRepository.cs" />
+    <Compile Include="RegularCode.cs" />
+    <Compile Include="ServiceProduct.cs" />
+    <Compile Include="ServiceProductRepository.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="SysException.cs" />
+    <Compile Include="SysExceptionRepository.cs" />
+    <Compile Include="SysField.cs" />
+    <Compile Include="SysFieldRepository.cs" />
+    <Compile Include="SysLog.cs" />
+    <Compile Include="SysLogRepository.cs" />
+    <Compile Include="SysMenu.cs" />
+    <Compile Include="SysMenuRepository.cs" />
+    <Compile Include="SysMenuSysRoleSysOperation.cs" />
+    <Compile Include="SysMenuSysRoleSysOperationRepository.cs" />
+    <Compile Include="SysOperation.cs" />
+    <Compile Include="SysOperationRepository.cs" />
+    <Compile Include="SysParas.cs" />
+    <Compile Include="SysPerson.cs" />
+    <Compile Include="SysPersonRepository.cs" />
+    <Compile Include="SysRole.cs" />
+    <Compile Include="SysRoleRepository.cs" />
+    <Compile Include="User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{EC4C607B-12E1-48F9-A55C-2A722D153FE3}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
